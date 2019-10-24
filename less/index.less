@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Neucha&display=swap');
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +54,8 @@ table {
 
 /* Set every element's box-sizing to border-box */
 
-
+@myfcolor: #f5f0e3;
+@myscolor: #7c0a02;
 
 * {
     box-sizing: border-box;
@@ -73,7 +75,7 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	border-bottom: 2px solid #f5f0e3;
+	border-bottom: 2px solid @myfcolor;
 	border-left: 2px solid black;
 	border-right: 2px solid black;
 	background: #f5f0e3;
@@ -133,7 +135,7 @@ li {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	background: #7c0a02;
+	background: @myscolor;
 	color: #f5f0e3;
 	border-left: 2px solid black;
 	border-right: 2px solid black;
