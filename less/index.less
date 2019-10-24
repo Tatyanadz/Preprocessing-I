@@ -4,6 +4,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Neucha&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,7 +23,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'Neucha', cursive;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -30,7 +32,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5em;
+	font-size: 16px;
 }
 ol, ul {
 	list-style: none;
@@ -49,11 +52,166 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+
+
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+.container {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.first-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	border-bottom: 2px solid #f5f0e3;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	background: #f5f0e3;
+	.profile {
+		// display: flex;
+		justify-content: flex-start;
+		width: 50%;
+		padding: 50px;
+		float: left;
+		// background: greenyellow;
+		img {
+			width: 270px;
+			height: 270px;
+			border-radius: 50%;
+		}
+		.pic {
+			padding-left: 200px;
+		}
+	}
+	
+	.contact {
+	   width: 30%;
+	//    background: grey;
+	   font-size: 18px;
+	   padding-top: 270px;
+	   text-align: center;
+
+	//    margin-top: 200px;
+	//    margin-right: 230px;
+	}
+	.bio h1 {	
+		font-size: 32px;
+		padding: 15px;
+	}
+	.bio p {
+		font-size: 18px;
+		padding: 15px;
+	}
+	.list-titles {
+		float: left;
+		text-align: left;
+		width: 40%;
+		font-weight: bold;
+	}
+	.list-content {
+		float: left;
+		width: 60%;
+		text-align: left;
+	}
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+.second-block {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	background: #7c0a02;
+	color: #f5f0e3;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.experience {
+	width: 45%;
+	display: flex;
+	margin: 20px;
+	padding: 10px;
+	padding-left: 140px;
+	flex-direction: column;
+    h2 {
+		font-size: 200%;
+		color: black
+	}
+	.work-exp {
+		padding-top: 20px;
+		.experience-title {
+			font-size: 110%;
+			font-weight: 700;
+			color: black;
+		}
+		.time {
+			padding-top: 10px;
+		}
+		.experience-title {
+			padding-top: 10px;
+			ul {
+				padding-top: 15px;
+			}
+		}
+		li {
+			list-style-type: disc;
+		}
+	}
+
+		
+	
+}
+
+.skills {
+	flex-direction: column;
+	width: 45%;
+	display: flex;
+	margin: 20px;
+	padding: 10px;
+	padding-top: 150px;
+	padding-left: 200px;
+	h2 {
+		font-size: 150%;
+		color: black;
+	}
+	.skills-text {
+		padding-top: 20px;
+		li {
+			list-style-type: disc;
+		}
+	}
+}
+
+h3 {
+	font-weight: 600;
+}
+
+@media(max-width: 500px) {
+	.container {
+		width: 500px;
+	}
+	.first-block {
+		flex-direction: column;
+	}
+	.profile {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+    .second-block {
+		flex-direction: column;
+	}
+}
